@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>magic.ba</title>
+    
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico" rel="stylesheet">
+    <link href="styleusluge.css" rel="stylesheet" type="text/css" media="all">
+    <link href="800px.css" rel="stylesheet" type="text/css" media="screen and (max-width: 800px)">
+    <link rel="shortcut icon" href="logo1.png">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    	<script type="text/javascript"></script>
+    	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    	 <script type="text/javascript" src="table_script.js"></script>
+
+    <title>magic.ba</title>
+
+</head>
+
+<body>
+	<div id="Container">
+		<header>
+		<div id="Header">
+			
+				
+
+
+		 		<nav>
+		 			<div id="logo">
+					<img src ="logo1.png" width="150px" height="95px">
+				</div>
+					
+				<ul>
+
+				<li><a href="index.html">POČETNA</a></li>
+				<li><a href="onama.html">O NAMA</a></li>
+				<li><a href="usluge.html"  id="aktivna">USLUGE</a>
+					
+					</li>
+				<li><a href="date.html">REZERVACIJE</a></li>
+				<li><a href="dokumentacija.pdf" download="dokumentacija.pdf"">DOKUMENTACIJA</a></li>
+				<li><a href="kontakt.html">KONTAKT</a></li>
+				</ul>
+
+				<br>
+
+
+
+		<div class="Login">
+			<i class="fa fa-unlock-alt"></i><a href="#" id="login">Login</a> |<i class="fa fa-user"></i> <a href="#">Register</a>
+		</div>
+			<div class="arrow-up">
+
+			</div>
+			<div class="login-form">
+				<form>
+					<label>Username</label>
+					<div>
+						<input type="text" id="user" placeholder="Username" required/>
+					</div>
+					<label>Password</label>
+					<div>
+						<input type="password" id="pass" placeholder="Password" required/>
+					</div>
+					<div>
+						<input type="submit" onclick="login()" value="Log In">
+					</div>
+					<div>
+						<a href="#" style="text-decoration: none; position: relative;color:orange;">Zaboravili ste šifru?</a>
+					</div>
+				</form>
+
+</div>
+<div class="close">
+	<i class="fa fa-close"></i>
+</div>
+
+<div class="search">
+	<i class="fa fa-search"></i>
+	<input type="text" class="inputsearch">
+</div>
+
+</nav>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var arrow=$(".arrow-up");
+		var form=$(".login-form");
+		var status=false;
+		$("#login").click(function(event){
+			event.preventDefault();
+			if(status == false){
+				arrow.fadeIn();
+				form.fadeIn();
+				status = true;
+			}
+			else{
+				arrow.fadeOut();
+				form.fadeOut();
+				status = false;
+
+			}
+		})
+	})
+	
+
+
+</script>
+				
+
+<script type="text/javascript">
+	var user = document.getElementById('user');
+	var pass = document.getElementById('pass');
+	
+	function login(){
+	var niz = [
+	{
+		user: 'amina',
+		pass: '12345',
+		tip: 'korisnik'
+	},
+	{
+		user: 'admin',
+		pass: '12345',
+		tip: 'admin'
+	}
+	];
+
+for (var i = 0; i < niz.length; i++){
+		if (niz[i].user == user.value && niz[i].pass == pass.value){
+			/*alert('prebacio me');*/
+			localStorage.ime = user.value;
+			if(niz[i].tip == 'admin'){
+					window.open("admin.html");
+			} else {
+					window.open("korisnik.html");
+			}
+		}
+		
+	}
+	}
+</script>
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$('.fa-search').click(function(){
+			$('.search').addClass('active');
+			$('.close, .inputsearch').fadeIn(1200);
+			$('.fa-search').hide(200);
+		})
+
+		$('.fa-close').click(function(){
+			$('.search').removeClass('active');
+			$('.close, .inputsearch').hide(100);
+			$('.fa-search').show(800);
+		})
+	})
+</script>
+
+
+
+			</header>
+			
+
+
+	
+	<div id="MainBody">
+	<br><br><br>
+		<h1><center> NAŠE USLUGE</center></h1><br><br>
+
+		<input type="text" id="unos" onkeyup="myFunction()" placeholder="Tražite usluge.." title="Ukucajte ime usluge">
+
+		<br>
+
+
+		<table id="Tabela">
+			<tr>
+				<th>Usluge</th>
+				<th>Cijene KM</th>
+
+			</tr>
+
+			<tr id="row1">
+				<td id="usluga_row1">Dnevna šminka</td>
+				<td id="cijena_row1">7,00</td>
+
+
+			</tr>
+
+			<tr id="row2">
+				<td id="usluga_row2">Večernja šminka</td>
+				<td id="cijena_row2">10,00</td>
+				
+				
+			</tr>
+
+			<tr id="row3">
+				<td id="usluga_row3">Profesionalno šminkanje sa konturama</td>
+				<td id="cijena_row3">25,00</td>
+				
+				
+			</tr>
+
+			<tr id="row4">
+				<td id="usluga_row4">Korekcija obrva</td>
+				<td id="cijena_row4">7,00</td>
+				
+				
+			</tr>
+
+			<tr id="row5">
+				<td id="usluga_row5">Nadogradnja trepavica</td>
+				<td id="cijena_row5">50,00</td>
+				
+				
+			</tr>
+
+			<tr id="row6">
+				<td id="usluga_row6">Manikura</td>
+				<td id="cijena_row6">15,00</td>
+				
+				
+			</tr>
+
+			<tr id="row7">
+				<td id="usluga_row7">Pedikura</td>
+				<td id="cijena_row7">25,00</td>
+				
+				
+			</tr>
+
+			<tr id="row8">
+				<td id="usluga_row8">Klasični tretman lica</td>
+				<td id="cijena_row8">35,00</td>
+				
+				
+			</tr>
+
+			<tr id="row9">
+				<td id="usluga_row9">Masaža cijelog tijela</td>
+				<td id="cijena_row9">35,00</td>
+				
+				
+			</tr>
+
+			<tr id="row10">
+				<td id="usluga_row10">Masaža leđa</td>
+				<td id="cijena_row10">15,00</td>
+				
+				
+			</tr>
+
+			<tr id="row11">
+				<td id="usluga_row11">Produžena masaža(15min)</td>
+				<td id="cijena_row11">5,00</td>
+				
+			</tr>
+
+			
+
+		</table>
+
+		<br><br>
+
+
+
+
+
+
+	</div>
+
+
+
+	<footer>
+	<div id="Footer">
+		<div class="row">
+  <div class="column" style="background-color:#1a1a1a;" >
+    <h4>KONTAKTIRAJTE NAS</h4>
+    <h3>Beauty Salon "Magic"</h3>
+    <p> Adresa: Ul. Zmaja od Bosne br. 24, Pofalići <br>
+    	Radno vrijeme: PON-SUB 08h-17h <br>
+    	Broj: +38761544789, +38733728592; <br>
+    E-mail: bcmagic@gmail.com </p>
+  </div>
+  <div class="column" style="background-color:#1a1a1a;">
+    
+    <h4>INSTAGRAM</h4>
+   <center><img src="kolaz.jpg" alt="kolazinstagram"></center>
+   
+  </div>
+  
+</div>
+<p>Copyright © Almedina Trešnjo & Amina Safić</p>
+
+	</div>
+
+
+</footer>
+
+	</div>
+
+
+</body>
+
+</html>
+    

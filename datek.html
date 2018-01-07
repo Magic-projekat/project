@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>magic.ba</title>
+    
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico" rel="stylesheet">
+    <link href="styledate.css" rel="stylesheet" type="text/css" media="all">
+    <link href="800px.css" rel="stylesheet" type="text/css" media="screen and (max-width: 800px)">
+    <link rel="shortcut icon" href="logo1.png">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    	<script type="text/javascript"></script>
+    	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <title>magic.ba</title>
+
+</head>
+
+<body>
+	<div id="Container">
+		<header>
+		<div id="Header">
+			
+				
+
+
+		 		<nav>
+		 			<div id="logo">
+					<img src ="logo1.png" width="150px" height="95px">
+				</div>
+					
+				<ul>
+
+				<li><a href="korisnik.html">POČETNA</a></li>
+				<li><a href="onamaak.html">O NAMA</a></li>
+				<li><a href="uslugek.html">USLUGE</a>
+					
+					</li>
+				<li><a href="datek.html" id="aktivna">REZERVACIJE</a></li>
+				<li><a href="dokumentacija.pdf" download="dokumentacija.pdf"">DOKUMENTACIJA</a></li>
+				<li><a href="kontaktk.html">KONTAKT</a></li>
+				</ul>
+
+				<br>
+
+<div class="close">
+	<i class="fa fa-close"></i>
+</div>
+
+<div class="search">
+	<i class="fa fa-search"></i>
+	<input type="text" class="inputsearch">
+</div>
+</nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$('.fa-search').click(function(){
+			$('.search').addClass('active');
+			$('.close, .inputsearch').fadeIn(1200);
+			$('.fa-search').hide(200);
+		})
+
+		$('.fa-close').click(function(){
+			$('.search').removeClass('active');
+			$('.close, .inputsearch').hide(100);
+			$('.fa-search').show(800);
+		})
+	})
+</script>
+
+		
+
+
+
+
+			</header>
+			
+
+	
+	<div id="MainBody">
+	<br><br><br><br><br>
+
+	<div class="Lijevi-dio">
+		<h4>Popunite slijedeću formu da nas kontaktirate ili rezervišete svoj termin</h4>
+
+		<form>
+			<p> 
+		<label for="the_name">Vaše ime i prezime</label> 
+		<input type="text" name="the_name" placeholder="Unesite ime i prezime" required id="the_name" value="">
+	</p>
+
+	<p> 
+		<label for="the_email">Vaša e-mail adresa</label> 
+		<input type="text" name="the_email" placeholder="Unesite e-mail adresu" required id="the_email" value="">
+	</p>
+
+	<p> <label for="app_date">Željeni datum</label> <br>
+		<input type="date" name="app_date" required id="app_date" value="">
+
+	</p>
+
+
+	<div class="service-select">
+		<p> 
+		<label for="service_select">Odaberite uslugu koju želite</label> <br>
+		<select name='service_select' id='service_select' class='' required>
+			<option value="">&nbsp;</option>
+			<option class="level-0" value="53">Makeup</option>
+			<option class="level-0" value="37">Manikura</option>
+			<option class="level-0" value="35">Tretman kose</option>
+			<option class="level-0" value="34">Masaža</option>
+			 
+		</select>
+	</p>
+</div>
+<p> 
+	<label for="the_message">Napomena:</label><br>
+	<textarea name="the_message" id="the_message" cols="30" rows="5"></textarea>
+</p>
+<p> <input type="submit" class="btn" name="Rezerviši" id="send_appointment" value="Rezerviši">
+</p>
+</form>
+
+
+
+
+	</div>
+
+	<div class="mapa">
+		<br><br>
+		<h4>KONTAKTIRAJTE NAS:</h4><br>
+		<p> 
+    	Radno vrijeme: PON-SUB 08h-17h <br>
+    	Broj: +38761544789, +38733728592; <br>
+    		E-mail: bcmagic@gmail.com<br>
+		Adresa: Ul. Zmaja od Bosne br. 24, Pofalići</p> 
+	<div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 43.854398,  lng: 18.391254};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2HAWNEMdpIaYOt-bHn9RTXyQYkTFbxNg&callback=initMap">
+    </script>
+
+	</div>
+</div>
+
+	<footer>
+	<div id="Footer">
+		<div class="row">
+  <div class="column" style="background-color:#1a1a1a;" >
+    <h4>KONTAKTIRAJTE NAS</h4>
+    <h3>Beauty Salon "Magic"</h3>
+    <p> Adresa: Ul. Zmaja od Bosne br. 24, Pofalići <br>
+    	Radno vrijeme: PON-SUB 08h-17h <br>
+    	Broj: +38761544789, +38733728592; <br>
+    E-mail: bcmagic@gmail.com </p>
+  </div>
+  <div class="column" style="background-color:#1a1a1a;">
+    
+    <h4>INSTAGRAM</h4>
+   <center><img src="kolaz.jpg" alt="kolazinstagram"></center>
+   
+  </div>
+  
+</div>
+<p>Copyright © Almedina Trešnjo & Amina Safić</p>
+
+	</div>
+
+
+</footer>
+
+	</div>
+
+
+</body>
+
+</html>

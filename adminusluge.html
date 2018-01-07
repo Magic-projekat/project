@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>magic.ba</title>
+    
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico" rel="stylesheet">
+    <link href="styleusluge.css" rel="stylesheet" type="text/css" media="all">
+    <link href="800px.css" rel="stylesheet" type="text/css" media="screen and (max-width: 800px)">
+    <link rel="shortcut icon" href="logo1.png">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    	<script type="text/javascript"></script>
+    	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    	 <script type="text/javascript" src="table_script.js"></script>
+
+    <title>magic.ba</title>
+
+</head>
+
+<body>
+	<div id="Container">
+		<header>
+		<div id="Header">
+			
+				
+
+
+		 		<nav>
+		 			<div id="logo">
+					<img src ="logo1.png" width="150px" height="95px">
+				</div>
+					
+				<ul>
+
+				<li><a href="admin.html">POČETNA</a></li>
+				<li><a href="onamaa.html">O NAMA</a></li>
+				<li><a href="adminusluge.html" id="aktivna">USLUGE</a>
+					
+					</li>
+				<li><a href="datea.html">REZERVACIJE</a></li>
+				<li><a href="dokumentacija.pdf" download="dokumentacija.pdf"">DOKUMENTACIJA</a></li>
+				<li><a href="kontakta.html">KONTAKT</a></li>
+				</ul>
+
+				<br>
+				<div class="close">
+	<i class="fa fa-close"></i>
+</div>
+
+<div class="search">
+	<i class="fa fa-search"></i>
+	<input type="text" class="inputsearch">
+</div>
+</nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$('.fa-search').click(function(){
+			$('.search').addClass('active');
+			$('.close, .inputsearch').fadeIn(1200);
+			$('.fa-search').hide(200);
+		})
+
+		$('.fa-close').click(function(){
+			$('.search').removeClass('active');
+			$('.close, .inputsearch').hide(100);
+			$('.fa-search').show(800);
+		})
+	})
+</script>
+
+
+
+		
+
+
+			</header>
+			
+
+
+	
+	<div id="MainBody">
+	<br><br><br>
+		<h1><center> NAŠE USLUGE</center></h1><br><br>
+
+		<input type="text" id="unos" onkeyup="myFunction()" placeholder="Tražite usluge.." title="Ukucajte ime usluge">
+
+		<br>
+
+
+		<table id="Tabela">
+			<tr>
+				<th>Usluge</th>
+				<th>Cijene KM</th>
+
+			</tr>
+
+			<tr id="row1">
+				<td id="usluga_row1">Dnevna šminka</td>
+				<td id="cijena_row1">7,00</td>
+
+				<td>
+
+				<input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+				<input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+				<input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+				</td>
+
+			</tr>
+
+			<tr id="row2">
+				<td id="usluga_row2">Večernja šminka</td>
+				<td id="cijena_row2">10,00</td>
+				<td>
+
+				<input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+				<input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+				<input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+				</td>
+				
+			</tr>
+
+			<tr id="row3">
+				<td id="usluga_row3">Profesionalno šminkanje sa konturama</td>
+				<td id="cijena_row3">25,00</td>
+				<td>
+
+				<input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+				<input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+				<input type="button" value="Delete" class="delete" onclick="delete_row('3')">
+				</td>
+				
+			</tr>
+
+			<tr id="row4">
+				<td id="usluga_row4">Korekcija obrva</td>
+				<td id="cijena_row4">7,00</td>
+				<td>
+
+				<input type="button" id="edit_button4" value="Edit" class="edit" onclick="edit_row('4')">
+				<input type="button" id="save_button4" value="Save" class="save" onclick="save_row('4')">
+				<input type="button" value="Delete" class="delete" onclick="delete_row('4')">
+				</td>
+				
+			</tr>
+
+			<tr id="row5">
+				<td id="usluga_row5">Nadogradnja trepavica</td>
+				<td id="cijena_row5">50,00</td>
+				<td>
+
+				<input type="button" id="edit_button5" value="Edit" class="edit" onclick="edit_row('5')">
+				<input type="button" id="save_button5" value="Save" class="save" onclick="save_row('5')">
+				<input type="button" value="Delete" class="delete" onclick="delete_row('5')">
+				</td>
+				
+			</tr>
+
+			<tr id="row6">
+				<td id="usluga_row6">Manikura</td>
+				<td id="cijena_row6">15,00</td>
+				<td>
+
+				<input type="button" id="edit_button6" value="Edit" class="edit" onclick="edit_row('6')">
+				<input type="button" id="save_button6" value="Save" class="save" onclick="save_row('6')">
+				<input type="button" value="Delete" class="delete" onclick="delete_row('6')">
+				</td>
+				
+			</tr>
+
+			<tr id="row7">
+				<td id="usluga_row7">Pedikura</td>
+				<td id="cijena_row7">25,00</td>
+				<td>
+
+				<input type="button" id="edit_button7" value="Edit" class="edit" onclick="edit_row('7')">
+				<input type="button" id="save_button7" value="Save" class="save" onclick="save_row('7')">
+				<input type="button" value="Delete" class="delete" onclick="delete_row('7')">
+				</td>
+				
+			</tr>
+
+			<tr id="row8">
+				<td id="usluga_row8">Klasični tretman lica</td>
+				<td id="cijena_row8">35,00</td>
+				<td>
+
+				<input type="button" id="edit_button8" value="Edit" class="edit" onclick="edit_row('8')">
+				<input type="button" id="save_button8" value="Save" class="save" onclick="save_row('8')">
+				<input type="button" value="Delete" class="delete" onclick="delete_row('8')">
+				</td>
+				
+			</tr>
+
+			<tr id="row9">
+				<td id="usluga_row9">Masaža cijelog tijela</td>
+				<td id="cijena_row9">35,00</td>
+				<td>
+
+				<input type="button" id="edit_button9" value="Edit" class="edit" onclick="edit_row('9')">
+				<input type="button" id="save_button9" value="Save" class="save" onclick="save_row('9')">
+				<input type="button" value="Delete" class="delete" onclick="delete_row('9')">
+				</td>
+				
+			</tr>
+
+			<tr id="row10">
+				<td id="usluga_row10">Masaža leđa</td>
+				<td id="cijena_row10">15,00</td>
+				<td>
+
+				<input type="button" id="edit_button10" value="Edit" class="edit" onclick="edit_row('10')">
+				<input type="button" id="save_button10" value="Save" class="save" onclick="save_row('10')">
+				<input type="button" value="Delete" class="delete" onclick="delete_row('10')">
+				</td>
+				
+			</tr>
+
+			<tr id="row11">
+				<td id="usluga_row11">Produžena masaža(15min)</td>
+				<td id="cijena_row11">5,00</td>
+				<td>
+
+				<input type="button" id="edit_button11" value="Edit" class="edit" onclick="edit_row('11')">
+				<input type="button" id="save_button11" value="Save" class="save" onclick="save_row('11')">
+				<input type="button" value="Delete" class="delete" onclick="delete_row('11')">
+				</td>
+			</tr>
+
+			<tr>
+				<td><input type="text" id="nova_usluga"></td>
+				<td><input type="text" id="nova_cijena"></td>
+				
+				<td><input type="button" class="add" onclick="add_row();" value="Dodaj Red"></td>
+			</tr>
+
+		</table>
+
+		<br><br>
+
+
+
+
+
+
+	</div>
+
+
+
+	<footer>
+	<div id="Footer">
+		<div class="row">
+  <div class="column" style="background-color:#1a1a1a;" >
+    <h4>KONTAKTIRAJTE NAS</h4>
+    <h3>Beauty Salon "Magic"</h3>
+    <p> Adresa: Ul. Zmaja od Bosne br. 24, Pofalići <br>
+    	Radno vrijeme: PON-SUB 08h-17h <br>
+    	Broj: +38761544789, +38733728592; <br>
+    E-mail: bcmagic@gmail.com </p>
+  </div>
+  <div class="column" style="background-color:#1a1a1a;">
+    
+    <h4>INSTAGRAM</h4>
+   <center><img src="kolaz.jpg" alt="kolazinstagram"></center>
+   
+  </div>
+  
+</div>
+<p>Copyright © Almedina Trešnjo & Amina Safić</p>
+
+	</div>
+
+
+</footer>
+
+	</div>
+
+
+</body>
+
+</html>
+    
